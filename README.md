@@ -227,8 +227,8 @@ The application automatically initializes and maintains an 8-column schema:
 
 ### 1. Clone & Set Up Virtual Environment
 ```bash
-git clone https://github.com/muhe-byte/Amharic_voice_expense_agent.git
-cd Amharic_voice_expense_agent
+git clone [https://github.com/mengistughiwot602-code/Amaharic_Voice_Expense_Agent.git]
+cd Amharic_Voice_Expense_Agent
 
 # Create virtual environment
 python -m venv .venv
