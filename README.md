@@ -99,14 +99,14 @@ flowchart TD
 
 | Module | File | Responsibility |
 |---|---|---|
-| **Bot Entrypoint** | [`main.py`](file:///C:/Users/OMEGA/Documents/Amharic_voice_expense_agent/main.py) | Telegram handlers, async polling, authorization checks, confirmation callback dispatch, and edit state management. |
-| **Agent Core** | [`agent.py`](file:///C:/Users/OMEGA/Documents/Amharic_voice_expense_agent/agent.py) | Interfaces with Google Gemini SDK (`google-genai`), enforces JSON schema extraction, handles model fallbacks, and validates extracted payloads. |
-| **Amharic Numbers** | [`amharic_numbers.py`](file:///C:/Users/OMEGA/Documents/Amharic_voice_expense_agent/amharic_numbers.py) | Full deterministic parser for Amharic number words, teens, compound numbers, Arabic digits, scales (*መቶ*, *ሺህ*, *ሚሊዮን*), and fractions (*ተኩል*, *ሩብ*). |
-| **Validation Layer** | [`validation.py`](file:///C:/Users/OMEGA/Documents/Amharic_voice_expense_agent/validation.py) | Pydantic `Expense` schema, Addis Ababa timezone conversion, and hybrid model-driven relative date resolution (`days_ago_delta`). |
-| **Google Sheets** | [`sheets_service.py`](file:///C:/Users/OMEGA/Documents/Amharic_voice_expense_agent/sheets_service.py) | Service account authentication, header auto-initialization, duplicate message prevention, and read/write operations. |
-| **Spending Service** | [`spending_service.py`](file:///C:/Users/OMEGA/Documents/Amharic_voice_expense_agent/spending_service.py) | Read-only analytics, category detection, and deterministic sums/breakdowns in pure Python. |
-| **Audio Processing** | [`audio.py`](file:///C:/Users/OMEGA/Documents/Amharic_voice_expense_agent/audio.py) | Voice file download handling, binary FFmpeg resolution, and `.oga` to MP3 conversion. |
-| **Error & Safety** | [`error_handler.py`](file:///C:/Users/OMEGA/Documents/Amharic_voice_expense_agent/error_handler.py) | Token masking filter (`SecretMaskingFilter`), exponential backoff retry decorator (`with_retry`), and 5-minute TTL pending confirmation store. |
+| **Bot Entrypoint** | [`main.py`](file:///C:/Users/OMEGA/Documents/Amharic_Voice_Expense_Agent/main.py) | Telegram handlers, async polling, authorization checks, confirmation callback dispatch, and edit state management. |
+| **Agent Core** | [`agent.py`](file:///C:/Users/OMEGA/Documents/Amharic_Voice_Expense_Agent/agent.py) | Interfaces with Google Gemini SDK (`google-genai`), enforces JSON schema extraction, handles model fallbacks, and validates extracted payloads. |
+| **Amharic Numbers** | [`amharic_numbers.py`](file:///C:/Users/OMEGA/Documents/Amharic_Voice_Expense_Agent/amharic_numbers.py) | Full deterministic parser for Amharic number words, teens, compound numbers, Arabic digits, scales (*መቶ*, *ሺህ*, *ሚሊዮን*), and fractions (*ተኩል*, *ሩብ*). |
+| **Validation Layer** | [`validation.py`](file:///C:/Users/OMEGA/Documents/Amharic_Voice_Expense_Agent/validation.py) | Pydantic `Expense` schema, Addis Ababa timezone conversion, and hybrid model-driven relative date resolution (`days_ago_delta`). |
+| **Google Sheets** | [`sheets_service.py`](file:///C:/Users/OMEGA/Documents/Amharic_Voice_Expense_Agent/sheets_service.py) | Service account authentication, header auto-initialization, duplicate message prevention, and read/write operations. |
+| **Spending Service** | [`spending_service.py`](file:///C:/Users/OMEGA/Documents/Amharic_Voice_Expense_Agent/spending_service.py) | Read-only analytics, category detection, and deterministic sums/breakdowns in pure Python. |
+| **Audio Processing** | [`audio.py`](file:///C:/Users/OMEGA/Documents/Amharic_Voice_Expense_Agent/audio.py) | Voice file download handling, binary FFmpeg resolution, and `.oga` to MP3 conversion. |
+| **Error & Safety** | [`error_handler.py`](file:///C:/Users/OMEGA/Documents/Amharic_Voice_Expense_Agent/error_handler.py) | Token masking filter (`SecretMaskingFilter`), exponential backoff retry decorator (`with_retry`), and 5-minute TTL pending confirmation store. |
 
 ---
 
@@ -252,8 +252,8 @@ cp .env.example .env
 ```
 Edit `.env` and fill in your credentials:
 ```dotenv
-TELEGRAM_BOT_TOKEN=123456789:ABCdefGHIjklMNOpqrsTUVwxyz
-GEMINI_API_KEY=AIzaSyYourGeminiApiKeyHere
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
+GEMINI_API_KEY=your_gemini_api_key_here
 GEMINI_MODEL=gemini-3.5-flash-lite
 GOOGLE_SHEET_ID=your_google_sheet_id_here
 GOOGLE_CREDENTIALS_PATH=credentials.json
